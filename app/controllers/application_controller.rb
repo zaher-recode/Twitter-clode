@@ -3,9 +3,11 @@ class ApplicationController < Sinatra::Base
     require_relative "session_controller"
     # require_relative 'reply_controller'
     require_relative "home_controller"
+    require_relative "tweet_controller"
+
    
     use SessionController
-
+    use TweetController
     use HomeController
     
     register Sinatra::ActiveRecordExtension
